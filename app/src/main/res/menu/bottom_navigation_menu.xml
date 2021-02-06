@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_icon"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_fireplace"
+        android:enabled="true"
+        android:icon="@drawable/ic_fireplace_icon"
+        android:title="@string/fireplace" />
+    <item
+        android:id="@+id/nav_tv"
+        android:enabled="true"
+        android:icon="@drawable/ic_tv_icon"
+        android:title="@string/tv" />
+    <item
+        android:id="@+id/nav_lights"
+        android:enabled="true"
+        android:icon="@drawable/ic_lights_icon"
+        android:title="@string/lights" />
+</menu>

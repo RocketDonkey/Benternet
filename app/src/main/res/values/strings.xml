@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Benternet</string>
+    <string name="benternet_name">Benternet</string>
+    <string name="home">Home</string>
+    <string name="fireplace">Fireplace</string>
+    <string name="tv">TV</string>
+    <string name="lights">Lights</string>
+    <string name="benternet_logo">Benternet logo</string>
+</resources>
