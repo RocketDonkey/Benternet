@@ -30,7 +30,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+
     }
 
     buildFeatures {
@@ -57,6 +58,13 @@ dependencies {
     // Material.
     implementation "com.google.android.material:material:$version_material"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Moshi.
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+
+    // Retrofit.
+    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
 
     // Testing.
     testImplementation 'junit:junit:4.13.1'
