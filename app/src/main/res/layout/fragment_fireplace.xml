@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTertiary"
+        tools:context=".ui.FireplaceFragment">
+
+        <Button
+            android:id="@+id/btn_fireplace_power"
+            style="@style/IconOnlyButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_power"
+            app:layout_constraintBottom_toTopOf="@+id/btn_fireplace_heat"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_fireplace_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline_fireplace_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_fireplace_heat"
+            style="@style/HomePageButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:text="@string/heat"
+            app:icon="@drawable/ic_fireplace_icon"
+            app:layout_constraintBottom_toTopOf="@+id/btn_fireplace_lights"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_fireplace_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline_fireplace_left"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fireplace_power" />
+
+        <Button
+            android:id="@+id/btn_fireplace_lights"
+            style="@style/HomePageButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fireplace_lights"
+            app:icon="@drawable/ic_gimme_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_fireplace_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline_fireplace_left"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fireplace_heat" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_fireplace_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/main_gutter" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_fireplace_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/main_gutter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

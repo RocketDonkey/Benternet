@@ -9,5 +9,8 @@
     <string name="set_the_mood">Set the Moo\'d</string>
     <string name="time_for_bed">Time for Bed</string>
     <string name="gimme_da_light">Gimme Da Light</string>
-    <string name="kill_the_headlights">Kill the Headlights</string>
+    <string name="lights_out">Lights Out!</string>
+    <string name="power">Power</string>
+    <string name="heat">Heat</string>
+    <string name="fireplace_lights">Lights</string>
 </resources>

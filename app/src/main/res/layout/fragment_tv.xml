@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTertiary"
+        tools:context=".ui.TvFragment">
+
+        <Button
+            android:id="@+id/btn_tv_power"
+            style="@style/IconOnlyButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_power"
+            app:layout_constraintBottom_toTopOf="@+id/btn_tv_vol_up"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_tv_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline_tv_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_tv_vol_up"
+            style="@style/IconOnlyButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_vol_up"
+            app:layout_constraintBottom_toTopOf="@+id/btn_tv_vol_down"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_tv_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline_tv_left"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tv_power" />
+
+        <Button
+            android:id="@+id/btn_tv_vol_down"
+            style="@style/IconOnlyButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_vol_down"
+            app:layout_constraintBottom_toTopOf="@+id/btn_tv_mute"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_tv_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline_tv_left"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tv_vol_up" />
+
+        <Button
+            android:id="@+id/btn_tv_mute"
+            style="@style/IconOnlyButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_mute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_tv_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline_tv_left"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tv_vol_down" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/main_gutter" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/main_gutter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

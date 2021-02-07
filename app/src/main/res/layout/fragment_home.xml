@@ -1,145 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
+        <variable
+            name="homeViewModel"
+            type="com.rocketdonkey.benternet.viewmodels.HomeViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/homeBackground"
+        android:id="@+id/fragment_home_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorTertiary">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="@string/benternet_name">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/margin_normal"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/benternet_logo"
-                    android:src="@drawable/ben_icon"
-                    app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
-                    app:strokeColor="@color/secondaryColor"
-                    app:strokeWidth="1dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/appName"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/appName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_normal"
-                    android:layout_weight="1"
-                    android:text="@string/benternet_name"
-                    android:textColor="@color/colorOnPrimary"
-                    android:textSize="@dimen/header_text_size"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-
         <Button
-            android:id="@+id/setMoodButton"
+            android:id="@+id/btn_set_mood"
             style="@style/HomePageButton"
-            android:layout_width="0dp"
+            android:layout_width="272dp"
             android:layout_height="wrap_content"
             android:text="@string/set_the_mood"
             app:icon="@drawable/ic_bed"
-            app:layout_constraintBottom_toTopOf="@+id/timeForBedButton"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintBottom_toTopOf="@+id/btn_time_for_bed"
+            app:layout_constraintStart_toStartOf="@+id/guideline_home_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_home_right"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/timeForBedButton"
+            android:id="@+id/btn_time_for_bed"
             style="@style/HomePageButton"
-            android:layout_width="0dp"
+            android:layout_width="272dp"
             android:layout_height="wrap_content"
             android:text="@string/time_for_bed"
             app:icon="@drawable/ic_bed"
-            app:layout_constraintBottom_toTopOf="@+id/gimmeDaLightButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/setMoodButton" />
+            app:layout_constraintBottom_toTopOf="@+id/btn_gimme_da_light"
+            app:layout_constraintTop_toBottomOf="@+id/btn_set_mood"
+            app:layout_constraintStart_toStartOf="@+id/guideline_home_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_home_right"
+            tools:layout_editor_absoluteX="70dp" />
 
         <Button
-            android:id="@+id/gimmeDaLightButton"
+            android:id="@+id/btn_gimme_da_light"
             style="@style/HomePageButton"
-            android:layout_width="0dp"
+            android:layout_width="272dp"
             android:layout_height="wrap_content"
             android:text="@string/gimme_da_light"
             app:icon="@drawable/ic_gimme_light"
-            app:layout_constraintBottom_toTopOf="@+id/killTheHeadlightsButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/timeForBedButton" />
+            app:layout_constraintBottom_toTopOf="@+id/btn_lights_out"
+            app:layout_constraintTop_toBottomOf="@+id/btn_time_for_bed"
+            app:layout_constraintStart_toStartOf="@+id/guideline_home_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_home_right"
+            tools:layout_editor_absoluteX="70dp" />
 
         <Button
-            android:id="@+id/killTheHeadlightsButton"
+            android:id="@+id/btn_lights_out"
             style="@style/HomePageButton"
-            android:layout_width="0dp"
+            android:layout_width="272dp"
             android:layout_height="wrap_content"
-            android:text="@string/kill_the_headlights"
+            android:text="@string/lights_out"
             app:icon="@drawable/ic_cancel"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/gimmeDaLightButton" />
-
-        <!-- Note: still not sure why labelVisibilityMode has to be set here and does not work
-             when it is only set in the theme. -->
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:theme="@style/NavBar"
-            app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/bottom_navigation_menu">
-
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
+            app:layout_constraintTop_toBottomOf="@+id/btn_gimme_da_light"
+            app:layout_constraintStart_toStartOf="@+id/guideline_home_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_home_right"
+            tools:layout_editor_absoluteX="70dp" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/leftGuideline"
+            android:id="@+id/guideline_home_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="@dimen/main_gutter" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/rightGuideline"
+            android:id="@+id/guideline_home_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"

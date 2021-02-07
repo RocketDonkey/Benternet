@@ -1,17 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_home_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/colorTertiary">
 
-        <fragment
-            android:id="@+id/homeFragment"
-            android:name="com.rocketdonkey.benternet.ui.HomeFragment"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/benternet_name">
 
-    </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/benternet_logo"
+                    android:src="@drawable/ben_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/appName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                    app:strokeColor="@color/secondaryColor"
+                    app:strokeWidth="1dp" />
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:text="@string/benternet_name"
+                    android:textColor="@color/colorOnPrimary"
+                    android:textSize="@dimen/header_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Note: still not sure why labelVisibilityMode has to be set here and does not work
+             when it is only set in the theme. -->
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:theme="@style/NavBar"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/activity_main_nav">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

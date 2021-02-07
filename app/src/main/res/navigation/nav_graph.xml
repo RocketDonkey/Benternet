@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:label="fragment_home"
+        android:name="com.rocketdonkey.benternet.ui.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/fragment_fireplace"
+        android:label="fragment_fireplace"
+        android:name="com.rocketdonkey.benternet.ui.FireplaceFragment"
+        tools:layout="@layout/fragment_fireplace" />
+
+    <fragment
+        android:id="@+id/fragment_tv"
+        android:label="fragment_tv"
+        android:name="com.rocketdonkey.benternet.ui.TvFragment"
+        tools:layout="@layout/fragment_tv" />
+</navigation>
