@@ -12,4 +12,21 @@
         <!-- Used to control the 'inactive' color. -->
         <item name="colorOnSurface">@color/colorOnPrimary</item>
     </style>
+
+    <!-- Rounded image style for the logo. -->
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="HomePageButton" parent="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/button_padding_top_bottom</item>
+        <item name="android:paddingBottom">@dimen/button_padding_top_bottom</item>
+        <item name="android:paddingStart">@dimen/button_padding_start_end</item>
+        <item name="android:paddingEnd">@dimen/button_padding_start_end</item>
+        <item name="android:textSize">16sp</item>
+        <item name="iconTint">@color/secondaryDarkColor</item>
+        <item name="backgroundTint">@color/colorOnPrimary</item>
+    </style>
 </resources>

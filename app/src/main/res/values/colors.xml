@@ -10,4 +10,6 @@
     <color name="secondaryTextColor">#000000</color>
     <color name="colorOnPrimary">#FFFFFF</color>
     <color name="colorOnSecondary">#000000</color>
+
+    <color name="colorTertiary">#F5F5F6</color>
 </resources>
