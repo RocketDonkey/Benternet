@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(R.id.fragment_tv)
                     true
                 }
+                R.id.nav_btn_lights -> {
+                    navController.navigate(R.id.fragment_lights)
+                    true
+                }
                 else -> {
                     Log.w(TAG, "Unknown navigation item: ${item}")
                     false

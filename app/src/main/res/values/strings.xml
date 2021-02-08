@@ -13,4 +13,12 @@
     <string name="power">Power</string>
     <string name="heat">Heat</string>
     <string name="fireplace_lights">Lights</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="downstairs">Downstairs</string>
+    <string name="subtitle_downstairs_lights">Ben\'s house / corner</string>
+    <string name="lights_on">On</string>
+    <string name="lights_off">Off</string>
+    <string name="upstairs">Upstairs</string>
+    <string name="subtitle_upstairs_lights">Living room</string>
 </resources>

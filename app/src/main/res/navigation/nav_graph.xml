@@ -7,19 +7,26 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:label="fragment_home"
         android:name="com.rocketdonkey.benternet.ui.HomeFragment"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/fragment_fireplace"
-        android:label="fragment_fireplace"
         android:name="com.rocketdonkey.benternet.ui.FireplaceFragment"
+        android:label="fragment_fireplace"
         tools:layout="@layout/fragment_fireplace" />
 
     <fragment
         android:id="@+id/fragment_tv"
-        android:label="fragment_tv"
         android:name="com.rocketdonkey.benternet.ui.TvFragment"
+        android:label="fragment_tv"
         tools:layout="@layout/fragment_tv" />
+
+    <fragment
+        android:id="@+id/fragment_lights"
+        android:name="com.rocketdonkey.benternet.ui.LightsFragment"
+        android:label="fragment_lights"
+        tools:layout="@layout/fragment_lights" />
+
 </navigation>
