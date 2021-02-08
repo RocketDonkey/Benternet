@@ -18,6 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorOnPrimary"
             app:layout_constraintBottom_toTopOf="@+id/lights_downstairs_controls"
             app:layout_constraintEnd_toStartOf="@+id/guideline_lights_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_lights_left"
@@ -40,7 +41,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/upstairs"
-                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textColor="@color/primaryDarkColor" />
 
                     <!-- Location text. -->
                     <TextView
@@ -49,7 +51,7 @@
                         android:layout_marginTop="8dp"
                         android:text="@string/subtitle_upstairs_lights"
                         android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary" />
+                        android:textColor="@color/primaryDarkColor" />
 
                 </LinearLayout>
 
@@ -84,6 +86,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorOnPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_lights_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_lights_left"
@@ -106,7 +109,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/downstairs"
-                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textColor="@color/primaryDarkColor" />
 
                     <!-- Location text. -->
                     <TextView
@@ -115,7 +119,7 @@
                         android:layout_marginTop="8dp"
                         android:text="@string/subtitle_downstairs_lights"
                         android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary" />
+                        android:textColor="@color/primaryDarkColor" />
 
                 </LinearLayout>
 
@@ -152,14 +156,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/main_gutter" />
+            app:layout_constraintGuide_begin="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_lights_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="@dimen/main_gutter" />
+            app:layout_constraintGuide_end="16dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
