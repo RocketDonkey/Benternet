@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Bowland Zone - Power Outlets</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic">
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="./outlets.css"/>
+  </head>
+
+  <body ng-app="outletsApp"
+        layout="row"
+        ng-controller="OutletsController as outlets"
+        ng-cloak >
+    <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+      <md-toolbar layout="row" class="md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+          <img src="bowlands.jpg" class="bowland-palace-logo">
+          <span>Bowland Palace</span>
+          <span flex></span>
+        </div>
+      </md-toolbar>
+
+      <md-content flex id="content">
+        <md-switch class="md-primary"
+                   md-no-ink
+                   aria-label="Dining Room (Christmas Lights)"
+                   ng-change="outlets.toggleOutlet('diningroom1', outlets.diningRoom1)"
+                   ng-model="outlets.diningRoom1">
+          Dining Room (Christmas Lights)
+        </md-switch>
+        <md-switch class="md-primary"
+                   md-no-ink
+                   aria-label="Living Room (Christmas Lights)"
+                   ng-change="outlets.toggleOutlet('livingroom1', outlets.livingRoom1)"
+                   ng-model="outlets.livingRoom1">
+          Living Room (Christmas Lights)
+        </md-switch>
+      </md-content>
+    </div>
+
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+
+    <script src="/outlet/outlets.js"></script>
+    <script src="/outlet/outlets-controller.js"></script>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

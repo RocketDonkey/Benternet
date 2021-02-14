@@ -1,0 +1,21 @@
+{
+  "name": "rpi-outlets",
+  "version": "0.0.1",
+  "description": "A very simple client/server for controlling power outlets from a Raspberry Pi.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RocketDonkey/Benternet.git"
+  },
+  "author": "Taylor Bowland",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "body-parser": "1.8",
+    "bower": "~1.8.8",
+    "express": "4.8"
+  }
+}

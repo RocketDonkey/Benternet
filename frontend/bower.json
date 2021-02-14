@@ -1,0 +1,24 @@
+{
+  "name": "rpi-outlets",
+  "version": "0.0.1",
+  "authors": [
+    "Taylor Bowland <taylor@taylorbowland.com>"
+  ],
+  "description": "A very simple client/server for controlling power outlets from a Raspberry Pi.",
+  "main": "server.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-material": "^1.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

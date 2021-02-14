@@ -1,0 +1,12 @@
+/**
+ * Style rules for the Outlets view.
+ */
+
+
+/* Header/Toolbar. */
+.bowland-palace-logo {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  margin-right: 16px;
+  width: 40px;
+}
