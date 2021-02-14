@@ -1,0 +1,13 @@
+[package]
+name = "remotes_server"
+version = "0.0.0"
+edition = "2018"
+publish = false
+
+[dependencies]
+rocket = "0.4.2"
+rocket_contrib = "0.4.2"
+rocket_cors = { version = "0.5.1", default-features = false }
+
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0.104"

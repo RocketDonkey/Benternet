@@ -1,0 +1,147 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tomorrow', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Main content holder. */
+.content {
+  background-color: #62c8e5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Border between the top of the screen and the title. */
+.top-banner {
+  background-color: #1b1b1b;
+  height: 2rem;
+}
+
+/* Title of the page (persists across views). */
+.section-header {
+  align-items: center;
+  background-color: #424242;
+  color: #ffffff;
+  display: flex;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.section-header img {
+  cursor: pointer;
+  border: 2px solid #fdd835;
+  border-radius: 50%;
+  height: 50px;
+  margin: 0 24px 0 12px;
+}
+
+/* Section buttons. */
+.buttons {
+  background-color: #e1e2e1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 0 24px;
+}
+
+.button-group {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  font-family: 'Roboto';
+}
+
+.button-group.special {
+  padding: 20px;
+}
+
+.button-group .title {
+  color: #29434e;
+}
+
+.button-group .description {
+  color: #394249;
+  font-size: 1rem;
+}
+
+.button-group .action-btn {
+  border-radius: 2px;
+  border-width: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  color: black;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.button-group .action-btn.on {
+  background-color: #ffd54f;
+}
+
+.button-group .action-btn.off {
+  background-color: #bdbdbd;
+  color: white;
+}
+
+.button-options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Footer / navigation. */
+
+.footer {
+  background-color: #424242;
+  color: white;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-around;
+  line-height: 3rem;
+  margin-top: auto;
+}
+
+.nav-btn {
+  /* Use a border color that is the same color as the background to prevent
+   * items from jumping when they are selected.
+   */
+  border-top: 4px solid #424242;
+}
+
+.nav-selected {
+  border-top: 4px solid #fdd835;
+  color: #fdd835;
+  /* Simulate a 'bold' effect without causing the items to move. */
+  text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333;
+}
+
+/* Class to apply to pages when hiding them. */
+.hidden {
+  display: none !important;
+}
+
+/* Page-specific styles. */
+
+.fireplace-page,
+.home-page,
+.lights-page,
+.tv-page {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  height: 100%;
+  text-align: center;
+}
+
+.tv-page .button-group,
+.fireplace-page .button-group {
+  padding: 20px;
+}

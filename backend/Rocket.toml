@@ -1,0 +1,21 @@
+# Except for the secret key, none of these are actually needed; Rocket has sane
+# defaults. We show all of them here explicitly for demonstrative purposes.
+
+[global.limits]
+forms = 32768
+json = 1048576 # this is an extra used by the json contrib module
+msgpack = 1048576 # this is an extra used by the msgpack contrib module
+
+[production]
+address = "0.0.0.0"
+port = 80
+workers = 1
+keep_alive = 5
+log = "normal"
+
+[development]
+address = "0.0.0.0"
+port = 8000
+workers = 1
+keep_alive = 5
+log = "normal"

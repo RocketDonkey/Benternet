@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Benternet</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Tomorrow&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content">
+      <!-- Section header. -->
+      <div class="top-banner"></div>
+      <div class="section-header">
+        <img src="/ben.jpg" />
+        <div>Benternet</div>
+      </div>
+      <!-- End Section header. -->
+
+      <!-- Home page. -->
+      <div id="home-page" class="home-page">
+        <div class="buttons">
+          <div id="set-mood" class="button-group special">
+            <div class="title">🐮 Set the moo'd</div>
+            <div class="description">Prepare for relaxation</div>
+          </div>
+          <div id="shut-down" class="button-group special">
+            <div class="title">🛏️ Time for bed</div>
+            <div class="description">Rid yourself of mortal coils</div>
+          </div>
+          <div id="all-on" class="button-group special">
+            <div class="title">💡 Gimme da light</div>
+            <div class="description">Put a Sean Paul on it</div>
+          </div>
+          <div id="all-off" class="button-group special">
+            <div class="title">🚫 Kill the headlights</div>
+            <div class="description">...and put it in netural</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Home page. -->
+
+      <!-- Fireplace page. -->
+      <div id="fireplace-page" class="fireplace-page hidden">
+        <div class="buttons">
+          <div id="fireplace-power" class="button-group">
+            <div class="title">⚡ Power</div>
+          </div>
+          <div id="fireplace-heat" class="button-group">
+            <div class="title">🔥 Heat</div>
+          </div>
+          <div id="fireplace-lights" class="button-group">
+            <div class="title">💡 Lights</div>
+          </div>
+        </div>
+      </div>
+      <!-- End Fireplace page. -->
+
+      <!-- Lights page. -->
+      <div id="lights-page" class="lights-page hidden">
+        <div class="buttons">
+          <div class="button-group">
+            <div class="title">Downstairs</div>
+            <div class="description">Ben's house / corner</div>
+            <div class="button-options">
+              <div id="downstairs-on" class="action-btn on">On</div>
+              <div id="downstairs-off" class="action-btn off">Off</div>
+            </div>
+          </div>
+          <div class="button-group">
+            <div class="title">Upstairs</div>
+            <div class="description">Living room</div>
+            <div class="button-options">
+              <div id="upstairs-on" class="action-btn on">On</div>
+              <div id="upstairs-off" class="action-btn off">Off</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Lights page. -->
+
+      <!-- TV page. -->
+      <div id="tv-page" class="tv-page hidden">
+        <div class="buttons">
+          <div id="tv-power" class="button-group">
+            <div class="title">⚡ Power</div>
+          </div>
+          <div id="tv-volume-up" class="button-group">
+            <div class="title">🔊 +</div>
+          </div>
+          <div id="tv-volume-down" class="button-group">
+            <div class="title">🔉 -</div>
+          </div>
+          <div id="tv-mute" class="button-group">
+            <div class="title">🔈 Mute</div>
+          </div>
+        </div>
+      </div>
+      <!-- End TV page. -->
+
+      <div class="footer">
+        <div class="nav-btn nav-selected" id="home-btn">HOME</div>
+        <div class="nav-btn" id="fireplace-btn">FIREPLACE</div>
+        <div class="nav-btn" id="tv-btn">TV</div>
+        <div class="nav-btn" id="lights-btn">LIGHTS</div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="navigation.js"></script>
+  <script type="module" src="remotes.js"></script>
+</html>

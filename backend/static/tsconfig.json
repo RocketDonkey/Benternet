@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "module": "es6",
+        "target": "es2017",
+        "noImplicitAny": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "sourceMap": true
+    },
+    "files": [
+        "navigation.ts",
+        "commands.ts",
+        "remotes.ts"
+    ],
+    "lib": [
+        "es2017.object"
+    ]
+}
